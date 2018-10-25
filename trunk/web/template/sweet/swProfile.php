@@ -14,7 +14,7 @@ header("content-type:application/javascript");
 if(isset($_SERVER['HTTP_REFERER'])) $dir=basename(dirname($_SERVER['HTTP_REFERER']));
 else $dir="";
 
-if($dir=="discuss3") $path_fix="../";
+if($dir=="discuss") $path_fix="../../../";
 else $path_fix="";
 
 require_once("../../include/db_info.inc.php");
