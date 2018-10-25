@@ -6,10 +6,10 @@
 //for people using hustoj out of China , be careful of the last two line of this file !
 
 // connect db 
-static 	$DB_HOST="localhost";
+static 	$DB_HOST="47.93.226.47";
 static 	$DB_NAME="jol";
-static 	$DB_USER="root";
-static 	$DB_PASS="root";
+static 	$DB_USER="hang";
+static 	$DB_PASS="hang!@#";
 
 static 	$OJ_NAME="HUSTOJ";
 static 	$OJ_HOME="./";
@@ -40,7 +40,7 @@ static  $OJ_REDISPORT=6379;
 static  $OJ_REDISQNAME="hustoj";
 static  $SAE_STORAGE_ROOT="http://hustoj-web.stor.sinaapp.com/";
 static  $OJ_CDN_URL="";  //  http://cdn.hustoj.com/  https://raw.githubusercontent.com/zhblue/hustoj/master/trunk/web/ 
-static  $OJ_TEMPLATE="bs3"; //使用的默认模板
+static  $OJ_TEMPLATE="sweet"; //使用的默认模板
 if(isset($_GET['tp'])) $OJ_TEMPLATE=$_GET['tp'];
 static  $OJ_LOGIN_MOD="hustoj";
 static  $OJ_REGISTER=true; //允许注册新用户

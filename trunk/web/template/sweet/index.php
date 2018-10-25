@@ -57,22 +57,22 @@ if($OJ_ONLINE){
                     <ul>
                         <li>
 <!--                            <a href="">-->
-                            <a href='#' target=_blank clickid=guanwang_navigation_homepage>主页</a>
+                            <a href='#'  clickid=guanwang_navigation_homepage>主页</a>
                         </li>
                         <li>
-                            <a href='<?php echo $path_fix?>problemset.php' target=_blank clickid=guanwang_navigation_productcenter>练习</a>
+                            <a href='<?php echo $path_fix?>problemset.php'  clickid=guanwang_navigation_productcenter>练习</a>
                         </li>
                         <li>
-                            <a href='<?php echo $path_fix?>contest.php' target=_blank clickid=guanwang_navigation_customer>竞赛</a>
+                            <a href='<?php echo $path_fix?>contest.php'  clickid=guanwang_navigation_customer>竞赛</a>
                         </li>
                         <li>
-                            <a href='<?php echo $path_fix?>category.php' target=_blank clickid=guanwang_navigation_customer>分类</a>
+                            <a href='<?php echo $path_fix?>category.php'  clickid=guanwang_navigation_customer>分类</a>
                         </li>
                         <li>
-                            <a href='<?php echo $path_fix?>status.php' target=_blank clickid=guanwang_navigation_yangtai>状态</a>
+                            <a href='<?php echo $path_fix?>status.php'  clickid=guanwang_navigation_yangtai>状态</a>
                         </li>
                         <li>
-                            <a href='<?php echo $path_fix?>ranklist.php' target=_blank clickid=guanwang_navigation_yangtai>排名</a>
+                            <a href='<?php echo $path_fix?>ranklist.php'  clickid=guanwang_navigation_yangtai>排名</a>
                         </li>
                     </ul>
                     <span class=ic_line></span></div>
