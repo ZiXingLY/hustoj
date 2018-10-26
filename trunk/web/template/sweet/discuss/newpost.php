@@ -23,6 +23,7 @@
 
 	
 ?>
+<?php include("../nav.php");?>
 
 <center>
 <div style="width:90%; text-align:left">

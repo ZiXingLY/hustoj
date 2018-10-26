@@ -5,6 +5,8 @@ require_once ("../include/my_func.inc.php");
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <!--<link rel=stylesheet href='../include/hoj.css' type='text/css'>-->
 <script src="../template/bs3/jquery.min.js"></script>
+<script src="layui/layui.js"></script>
+<link rel="stylesheet" href="layui/css/layui.css">
 <script>
 $("document").ready(function (){
   $("form").append("<div id='csrf' />");

@@ -85,16 +85,16 @@ $rows_cnt = count($result);
 $cnt=0;
 $isadmin = isset($_SESSION[$OJ_NAME.'_'.'administrator']);
 ?>
-<table style="clear:both; width:100%">
+<table style="clear:both; width:100%" class="layui-table">
 <tr align=center class='toprow'>
-        <td width="2%"><?php if ($isadmin) echo "<input type=checkbox>"; ?></td>
-        <td width="3%"></td>
-        <td width="4%">Prob</td>
-        <td width="12%">Author</td>
-        <td width="46%">Title</td>
-        <td width="8%">Post Date</td>
-        <td width="16%">Last Reply</td>
-        <td width="3%">Re</td>
+        <th width="2%" lay-data="{field:'u1',width:50}"><?php if ($isadmin) echo "<input type=checkbox>"; ?></th>
+        <th width="3%" lay-data="{field:'u2'}"></th>
+        <th width="4%" lay-data="{field:'u3'}">Prob</th>
+        <th lay-data="{field:'u4'}">Author</th>
+        <th lay-data="{field:'u5'}">Title</th>
+        <th width="8%" lay-data="{field:'u6'}">Post Date</th>
+        <th width="16%" lay-data="{field:'u7'}">Last Reply</th>
+        <th width="3%" lay-data="{field:'u8'}">Re</th>
 </tr>
 <?php if ($rows_cnt==0) echo("<tr class=\"evenrow\"><td colspan=4></td><td style=\"text-align:center\">No thread here.</td></tr>");
 $i=0;
@@ -124,7 +124,7 @@ foreach ( $result as $row){
 		}
         }
 	echo "</td>";
-        echo "<td><a href=\"../userinfo.php?user={$row['author_id']}\">{$row['author_id']}</a></td>";
+        echo "<td><a href=\"../../../userinfo.php?user={$row['author_id']}\">{$row['author_id']}</a></td>";
         if($row['cid'])echo "<td><a href=\"thread.php?tid={$row['tid']}&cid={$row['cid']}\">".htmlentities($row['title'],ENT_QUOTES,"UTF-8")."</a></td>";
         else echo "<td><a href=\"thread.php?tid={$row['tid']}\">".htmlentities($row['title'],ENT_QUOTES,"UTF-8")."</a></td>";
         echo "<td>{$row['posttime']}</td>";

@@ -33,7 +33,7 @@ $cur_path = "template/$OJ_TEMPLATE/"
 	<table lay-filter="demo">
 <thead class=toprow>
 	<tr>
-		<th lay-data="{field:'username',}">OJ</th><th lay-data="{field:'username1',}">Name</th><th class="column-3" lay-data="{field:'username2', width:100}">Start Time</th><th class="column-4" lay-data="{field:'username3', width:100}">Week</th><th class="column-5" lay-data="{field:'username4', width:100}">Access</th>
+		<th lay-data="{field:'username',width:200}">OJ</th><th lay-data="{field:'username1',width:500}">Name</th><th class="column-3" lay-data="{field:'username2'}">Start Time</th><th class="column-4" lay-data="{field:'username3', width:100}">Week</th><th class="column-5" lay-data="{field:'username4', width:100}">Access</th>
 	</tr>
 </thead>
 <tbody class="row-hover">

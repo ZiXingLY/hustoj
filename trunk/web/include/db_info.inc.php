@@ -6,10 +6,10 @@
 //for people using hustoj out of China , be careful of the last two line of this file !
 
 // connect db 
-static 	$DB_HOST="47.93.226.47";
+static 	$DB_HOST="localhost";
 static 	$DB_NAME="jol";
-static 	$DB_USER="hang";
-static 	$DB_PASS="hang!@#";
+static 	$DB_USER="root";
+static 	$DB_PASS="root";
 
 static 	$OJ_NAME="HUSTOJ";
 static 	$OJ_HOME="./";

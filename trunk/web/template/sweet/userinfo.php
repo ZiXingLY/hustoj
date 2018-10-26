@@ -89,7 +89,7 @@ mypie.drawPie(y,x);
 </table>
 <?php
 if(isset($_SESSION[$OJ_NAME.'_'.'administrator'])){
-?><table border=1><tr class=toprow><td>UserID<td>Password<td>IP<td>Time</tr>
+?><table border=1 class="layui-table"><tr class=toprow><td>UserID<td>Password<td>IP<td>Time</tr>
 <tbody>
 <?php
 $cnt=0;

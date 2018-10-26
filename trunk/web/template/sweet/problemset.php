@@ -20,27 +20,51 @@
   </head>
 
   <body>
+  <?php include("template/$OJ_TEMPLATE/nav.php");?>
 
     <div class="container">
-    <?php include("template/$OJ_TEMPLATE/nav.php");?>	    
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
+
+          <div class="layui-btn-group">
+              <button class="layui-btn layui-btn-primary layui-btn-sm">
+                  <a href="problemset.php?page=1">&lt;</a>
+              </button>
+              <?php
+              if(!isset($page)) $page=1;
+              $page=intval($page);
+              $section=8;
+              $start=$page>$section?$page-$section:1;
+              $end=$page+$section>$view_total_page?$view_total_page:$page+$section;
+              for ($i=$start;$i<=$end;$i++){
+                  echo "<button class='layui-btn layui-btn-sm".($page==$i?" ":" layui-btn-primary")."page-item'>
+        <a href='problemset.php?page=".$i."'>".$i."</a></button>";            }
+              ?>
+              <button class="layui-btn layui-btn-primary layui-btn-sm">
+                  <a href="problemset.php?page=<?php echo $view_total_page?>">&gt;</a>
+              </button>
+          </div>
 <center>
-<nav id="page" class="center"><ul class="pagination">
-<li class="page-item"><a href="problemset.php?page=1">&lt;&lt;</a></li>
-<?php
-if(!isset($page)) $page=1;
-$page=intval($page);
-$section=8;
-$start=$page>$section?$page-$section:1;
-$end=$page+$section>$view_total_page?$view_total_page:$page+$section;
-for ($i=$start;$i<=$end;$i++){
- echo "<li class='".($page==$i?"active ":"")."page-item'>
-        <a href='problemset.php?page=".$i."'>".$i."</a></li>";
-}
-?>
-<li class="page-item"><a href="problemset.php?page=<?php echo $view_total_page?>">&gt;&gt;</a></li>
-</ul></nav>
+<!--<nav id="page" class="center">-->
+<!--        <div class="layui-btn-group">-->
+<!--            <button class="layui-btn layui-btn-primary layui-btn-sm">-->
+<!--                <a href="problemset.php?page=1">&lt;</a>-->
+<!--            </button>-->
+<!--            --><?php
+//            if(!isset($page)) $page=1;
+//            $page=intval($page);
+//            $section=8;
+//            $start=$page>$section?$page-$section:1;
+//            $end=$page+$section>$view_total_page?$view_total_page:$page+$section;
+//            for ($i=$start;$i<=$end;$i++){
+//                echo "<button class='layui-btn layui-btn-sm".($page==$i?" ":" layui-btn-primary")."page-item'>
+//        <a href='problemset.php?page=".$i."'>".$i."</a></button>";            }
+//            ?>
+<!--            <button class="layui-btn layui-btn-primary layui-btn-sm">-->
+<!--                <a href="problemset.php?page=--><?php //echo $view_total_page?><!--">&gt;</a>-->
+<!--            </button>-->
+<!--        </div>-->
+<!--</nav>-->
 
 <table>
 <tr align='center' class='evenrow'><td width='5'></td>
@@ -59,12 +83,12 @@ for ($i=$start;$i<=$end;$i++){
 <table id='problemset' width='90%'class='table table-striped' lay-filter="demo">
 <thead>
 <tr class='toprow'>
-<th width='5' lay-data="{field:'u1',}"></th>
-<th width='20'  class='hidden-xs' lay-data="{field:'u2',}" ><?php echo $MSG_PROBLEM_ID?></th>
+<th lay-data="{field:'u1',width:50}"></th>
+<th lay-data="{field:'u2',}"><?php echo $MSG_PROBLEM_ID?></th>
 <th lay-data="{field:'u3',}"><?php echo $MSG_TITLE?></th>
-<th lay-data="{field:'u4',}" class='hidden-xs' width='10%'><?php echo $MSG_SOURCE?></th>
-<th lay-data="{field:'u5',}" style="cursor:hand" width=60 ><?php echo $MSG_AC?></th>
-<th lay-data="{field:'u6',}" style="cursor:hand" width=60 ><?php echo $MSG_SUBMIT?></th>
+<th lay-data="{field:'u4',}"><?php echo $MSG_SOURCE?></th>
+<th lay-data="{field:'u5',}"><?php echo $MSG_AC?></th>
+<th lay-data="{field:'u6',}"><?php echo $MSG_SUBMIT?></th>
 </tr>
 </thead>
 <tbody>

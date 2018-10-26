@@ -56,7 +56,7 @@ if(isset($_GET['keyword']) && $_GET['keyword']!=""){
 </form>
 
 <center>
-  <table width=100% border=1 style="text-align:center;">
+  <table width=100% border=1 style="text-align:center;" class="layui-table">
     <tr>
       <td>ID</td>
       <td>NICK</td>

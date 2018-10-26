@@ -70,7 +70,7 @@ echo "</select>";
 ?>
 
 <center>
-<table width=100% border=1 style="text-align:center;">
+<table width=100% border=1 style="text-align:center;" class="layui-table">
   <form method=post action=contest_add.php>
     <tr>
       <td width=60px>ID <input type=checkbox style='vertical-align:2px;' onchange='$("input[type=checkbox]").prop("checked", this.checked)'></td>
