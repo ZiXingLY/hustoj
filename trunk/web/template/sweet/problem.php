@@ -141,7 +141,9 @@
   $(document).ready(function(){
     $("#creator").load("problem-ajax.php?pid=<?php echo $id?>");
   });
-  </script>   
+  </script>
+
+<!--  <button><a href="--><?php //echo $cur_path?><!--problem-pdf-view.php">pdf</a></button>-->
 
 </body>
 </html>
